@@ -1,0 +1,65 @@
+{
+
+    "users": [
+      { "id": 1, "name": "Rahul katiyar", "address": "Kanpur" },
+      { "id": 2, "name": "Vishwas Sharma", "address": "Agra" },
+      { "id": 3, "name": "Sonu", "address": "Ghaziyabad" },
+      { "id": 4, "name": "Tarun", "address": "Noida" }
+    ],
+
+
+
+
+    "products": [
+                { "product_id": 1, 
+                  "product_name": "body-spray", 
+                  "price":"$85",
+                  "description":"135-spark-power-series-body-spray-kamasutra-men-women-original",
+                  "product_image":"./assets/product_images/135-spark-power-series-body-spray-kamasutra-men-women-original.jpeg"
+
+                },
+                { "product_id": 2, 
+                  "product_name": "Hand Sanitizer", 
+                  "price":"$100",
+                  "description":"500-instant-hand-sanitizer-bottle-dettol-original",
+                  "product_image":"./assets/product_images/500-instant-hand-sanitizer-bottle-dettol-original.jpeg"
+
+                },
+                { "product_id": 3, 
+                  "product_name": "Tea Powder", 
+                  "price":"$10",
+                  "description":"500-natural-care-regular-tea-powder-red-label-original",
+                  "product_image":"./assets/product_images/500-natural-care-regular-tea-powder-red-label-original.jpeg"
+
+                },
+                { "product_id": 4, 
+                  "product_name": "Horlicks", 
+                  "price":"$40",
+                  "description":"750-classic-malt-pouch-horlicks-original",
+                  "product_image":"./assets/product_images/750-classic-malt-pouch-horlicks-original.jpeg"
+
+                },
+                { "product_id": 5, 
+                  "product_name": "Motorola g9", 
+                  "price":"$786",
+                  "description":"motorola-g9-power-palr0016in-original",
+                  "product_image":"./assets/product_images/motorola-g9-power-palr0016in-original.jpeg"
+
+                },
+                { "product_id": 6, 
+                  "product_name": "T shirt", 
+                  "price":"$78",
+                  "description":"xs-t322-blwh-seven-rocks-original",
+                  "product_image":"./assets/product_images/xs-t322-blwh-seven-rocks-original.jpeg"
+
+                }
+                
+            ],
+
+    "purchased":[
+                {
+
+                }
+            ]
+    
+  }
