@@ -27,8 +27,7 @@ function getData(res){
             <button>Add TO Cart</button>
           </div>
         </div>
-      </div>
-        `;
+      </div>`;
       contentContainer.innerHTML+=template;
     });
 
