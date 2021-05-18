@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>userDetails</title>
+    <style>
+      body {
+        background-color: rgb(79, 140, 79);
+      }
+      .login-container {
+        border: 5px solid rgb(15, 14, 14);
+        display: flex;
+        width: 50%;
+        height: 500px;
+        margin: 50px auto;
+        background-color: #95dd92;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+      }
+      .login-container form {
+        display: inline-grid;
+      }
+      .login-container input {
+        margin: 10px;
+        width: 250px;
+        height: 30px;
+      }
+      input[type="submit"] {
+        display: inline;
+        width: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <h1>Please fill your details...</h1>
+      <form action="#" name="userform">
+        <input type="text" placeholder="Enter your name" name="name" />
+        <input type="password" placeholder="Enter your password" name="pass" />
+        <input type="number" placeholder="Enter your mobile number" name="mobile"/>
+        <input type="email" placeholder="Enter your email" name="email" />
+        <input type="text" placeholder="Enter your address" name="address" />
+        <input type="submit" value="Submit" name="sbm-btn" id="sbm-btn" />
+      </form>
+    </div>
+    <script>
+      document.getElementById("sbm-btn").addEventListener("click", userDetails);
+
+      function userDetails(event) {
+        event.preventDefault();
+        let name = document.userform.name.value;
+        let pass = document.userform.pass.value;
+        let mobile = document.userform.mobile.value;
+        let email = document.userform.email.value;
+        let address = document.userform.address.value;
+
+        let data={"id":"","name":name,"pass":pass,"address":address,"mobile":mobile,"email":email}
+//###############Sending data to the server##########
+        
+            function sendData(url) {
+            let req = new XMLHttpRequest();
+            req.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                console.log(this)
+                }
+            };
+            req.open("POST", url, true);
+            req.setRequestHeader("Content-type", "application/json");
+            req.send(JSON.stringify(data));
+            }
+            sendData("http://localhost:3000/users");
+            document.userform.reset();
+
+//###############Saving name and password in localStorage object##############
+            localStorage.setItem(name,pass);
+            }
+
+    </script>
+  </body>
+</html>
